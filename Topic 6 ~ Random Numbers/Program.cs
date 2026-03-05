@@ -142,11 +142,24 @@
             Console.WriteLine();
             Console.WriteLine("Press any key to continue...");
             Console.ReadLine();
-            Console.Clear();    
+            Console.Clear();
 
             // Task 3
 
+            int dice1, dice2;
+
+            Console.WriteLine("Let's roll some dice! I will roll two dice and add them together.");
+            Console.WriteLine();
+
+            dice1 = generator.Next(1, 7);   
+            dice2 = generator.Next(1, 7);   
+
+            Console.WriteLine("You rolled a " + dice1 + " and a " + dice2 + " for a total of " + (dice1 + dice2) + "!");
             
+            Console.WriteLine();
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadLine();
+            Console.Clear();
 
         }
     }
