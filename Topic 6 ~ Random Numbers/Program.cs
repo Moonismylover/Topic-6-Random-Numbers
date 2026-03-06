@@ -8,7 +8,7 @@
 
             // Create a random number generator. Only one!
 
-            Random generator = new Random(989890);
+            Random generator = new Random();
             int randNum;           // We will store our random number in this variable.
 
             randNum = generator.Next(10);
@@ -50,7 +50,7 @@
             }
 
             Console.WriteLine();
-            Console.WriteLine("Press any key to continue..."); 
+            Console.WriteLine("Press any key to continue...");
 
             /*
             Questions:
@@ -80,6 +80,7 @@
             4) Change the random seed to something else and observe the behavior. What happens to the 
                random numbers? (remove the seed when you are done).
              
+                Random generator = new Random();
                 The generated numbers are different from the previous seed. 
                 This is because the seed determines the sequence of random numbers generated. 
                 If you change the seed, you will get a different sequence of random numbers.
@@ -160,6 +161,40 @@
             Console.WriteLine("Press any key to continue...");
             Console.ReadLine();
             Console.Clear();
+
+            // Task 4
+
+            string question;
+            int responses;
+
+            Console.WriteLine("Welcome to the 'Sea Witch Lair'! Ask any question you wish to!");
+            Console.Write("Question: ");
+            question = Console.ReadLine();
+            Console.WriteLine();
+
+            responses = generator.Next(1, 6);
+            Thread.Sleep(1500);
+
+            if (responses == 1)
+            {
+                Console.WriteLine("Yes! Most definitely!");
+            }
+            else if (responses == 2)
+            {
+                Console.WriteLine("Not any time soon!");
+            }
+            else if (responses == 3)
+            {
+                Console.WriteLine("Maybe! But no guarantee!");
+            }
+            else if (responses == 4)
+            {
+                Console.WriteLine("How is that even possible? Never!");
+            }
+            else
+            {
+                Console.WriteLine("Hmmm...I actually don't know!");
+            }
 
         }
     }
